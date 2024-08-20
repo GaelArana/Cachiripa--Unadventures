@@ -36,7 +36,7 @@ export class StartScene extends Phaser.Scene {
         let playButton = this.add.image(this.sys.game.config.width / 2, 300, 'playButton')
             .setOrigin(0.5)
             .setInteractive()
-            .on('pointerdown', () => this.startGame());
+            .on('pointerdown', () => this.scene.start.('instructionScene'));
 
         // Escalar el botón de play según sea necesario
         playButton.setScale(0.9);
